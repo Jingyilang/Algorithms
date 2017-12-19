@@ -1,0 +1,26 @@
+package chapter1_1;
+
+public class EX15 {
+	public static int[] histogram(int[] a, int M)
+	{
+		int[] hist = new int[M];
+		for (int i = 0;i <  a.length; i++)
+		{
+			if (a[i] > 0 && a[i] < M)
+				hist[a[i]]++;
+		}
+		return hist;
+		
+	}
+
+	public static void main(String[] args) {
+		int[] a = {1, 2, 3, 4, 5, 6, 7, 8};
+		int[] hist = histogram(a, 8);
+		for (int i = 0; i < hist.length; i++)
+		{
+			System.out.printf("%3d", hist[i]);
+		}
+
+	}
+
+}
